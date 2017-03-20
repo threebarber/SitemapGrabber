@@ -10,7 +10,7 @@ import os
 sitemapfile = open(filename,'w+')
 
 try:
-    for url in search('inurl:\"/sitemap_products_1.xml\" intext:'+keyword,lang='es', stop=numresults):
+    for url in search('inurl:\"/sitemap_products_1.xml\" intext:'+keyword,lang='es', stop=numresults,user_agent="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"):
         print("[+]Retrieved Sitemap Containing Keyword \"" +keyword+"\": "+url)
         if "?" in url:
             url = url.split("?")[0]
